@@ -4,28 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>포트폴리오</title>
+    <title>PORTFOLIO</title>
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/portfolio.css" />
   </head>
   <body>
     <div>
       <section id="wrap">
-        <header><span id="darkMode">DARK</span></header>
-        <div id="smallCircle" class="whiteBackground"></div>
+        <header>
+          <span id="darkMode" class="whiteFont">DARK</span>
+        </header>
+        <div id="smallCircle"></div>
         <div class="fontsize15rem whiteFont bold subject">Hi,</div>
 
         <div class="fontsize10rem whiteFont bold subject line80">
           I'M DONG <br />
           SOO
         </div>
-        <div id="BigCircle" class="whiteBackground"></div>
+        <div id="BigCircle" data-id="dongsoo"></div>
       </section>
       <section>
         <div class="whiteFont fontsize5rem centerTextBox10 bold">
           DONGSOO'S PORTFOLIO
         </div>
-        <div class="fontsize5rm bold centerTextBox10 whiteBackground">
+        <div
+          id="aboutme"
+          class="fontsize5rm bold centerTextBox10 whiteBackground"
+        >
           ABOUT ME
         </div>
         <div>
@@ -37,7 +42,13 @@
               <div class="whiteboxWidth whiteBox13rem"></div>
             </div>
             <div class="whiteboxWidth whiteBox13rem"></div>
-            <div class="whiteboxWidth whiteBox20rem"></div>
+            <div class="whiteboxWidth whiteBox20rem">
+              <p class="fontsize2rem bold text-align">LANGUAGE</p>
+              <li class="fontsize1rem">KOREAN</li>
+              <li class="fontsize1rem">JAPANESE</li>
+              <li class="fontsize1rem">ENGLISH</li>
+              <li class="fontsize1rem">CHINESE</li>
+            </div>
           </div>
         </div>
       </section>
@@ -52,23 +63,22 @@
     <script>
       window.onload = function () {
         console.log(
-          document.getElementById("bigCircle").getAttribute("data-id")
+          document.getElementById("BigCircle").getAttribute("data-id")
         );
 
-        console.log(document.getElementById("bigCircle").getAttribute("class"));
+        console.log(document.getElementById("BigCircle").getAttribute("class"));
 
-        document.documentElement.setAttribute("color-theme", "pink");
-        // 최상위 root에 이속성을 셋팅해준겁니다
+        document.documentElement.setAttribute("color-theme", "green");
       };
 
-      let darkMode = document.getElemntById("darkMode");
+      let darkMode = document.getElementById("darkMode");
 
       darkMode.addEventListener("click", (e) => {
         if (e.target.innerText === "DARK") {
           document.documentElement.setAttribute("color-theme", "dark");
-          e.target.innerText = "PINK";
+          e.target.innerText = "GREEN";
         } else {
-          document.documentElement.setAttribute("color-theme", "pink");
+          document.documentElement.setAttribute("color-theme", "green");
           e.target.innerText = "DARK";
         }
       });
