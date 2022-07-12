@@ -1,10 +1,8 @@
-:root[color-theme="pink"] {
-  --background: #ffb6ea;
+:root[color-theme="green"] {
   --boxColor: #fff;
 }
 
 :root[color-theme="dark"] {
-  --background: #000;
   --boxColor: #2f2f2f;
 }
 
@@ -15,8 +13,13 @@
 .whiteFont {
   color: #fff;
 }
+
 .whiteBackground {
-  background-color: #fff;
+  background-color: var(--boxColor);
+}
+
+.fontsize1rem {
+  font-size: 1rem;
 }
 
 .fontsize2rem {
@@ -79,4 +82,9 @@
 .subject {
   padding-top: 2rem;
   padding-left: 6rem;
+}
+
+.text-align {
+  padding-top: 1rem;
+  text-align: center;
 }
